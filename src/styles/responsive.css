@@ -1,0 +1,19 @@
+@media only screen and (min-width: 400px) {
+	.headerlight {
+		background-image: url(../assets/bg-desktop-light.jpg);
+	}
+
+	.headerdark {
+		background-image: url(../assets/bg-desktop-dark.jpg);
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.headerlight {
+		background-image: url(../assets/bg-mobile-light.jpg);
+	}
+
+	.headerdark {
+		background-image: url(../assets/bg-mobile-dark.jpg);
+	}
+}

@@ -1,5 +1,6 @@
 import HeaderApp from './components/HeaderApp.js';
 import './styles/App.css';
+import './styles/responsive.css';
 
 function App() {
 	return (

@@ -1,34 +1,27 @@
 import React from 'react';
 
-function HeaderApp() {
-	return (
-		<header>
-			<h1 className='app-header__logo'>TODO</h1>
-			<DarkModeBtn></DarkModeBtn>
-		</header>
-	);
-}
-
-class DarkModeBtn extends React.Component {
+class HeaderApp extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			colorMode: 'light', //True: Light, False: Dark
+			colorMode: 'light',
 		};
 	}
-
 	render() {
 		return (
-			<span
-				className={`header-darkMode__toggle ${this.state.colorMode}`}
-				onClick={() => this.switchDarkMode()}
-			></span>
+			<header className={`header${this.state.colorMode}`}>
+				<h1 className='app-header__logo'>TODO</h1>
+				<DarkModeBtn
+					colorMode={this.state.colorMode}
+					onClick={() => this.switchDarkMode()}
+				></DarkModeBtn>
+			</header>
 		);
 	}
 
 	switchDarkMode() {
 		this.setState({
-			colorMode: this.state.colorMode == 'light' ? 'dark' : 'light',
+			colorMode: this.state.colorMode === 'light' ? 'dark' : 'light',
 		});
 
 		const cssVariables = {
@@ -51,11 +44,23 @@ class DarkModeBtn extends React.Component {
 		for (let cssVar in cssVariables[this.state.colorMode]) {
 			document.documentElement.style.setProperty(
 				cssVar,
-				cssVariables[this.state.colorMode][cssVar]
+				cssVariables[
+					this.state.colorMode === 'light' ? 'dark' : 'light'
+				][cssVar] //Updated with the other value because with the click the state isn't uploaded yet
 			);
 		}
+
 		return;
 	}
+}
+
+function DarkModeBtn(props) {
+	return (
+		<span
+			className={`header-darkMode__toggle ${props.colorMode}`}
+			onClick={() => props.onClick()}
+		></span>
+	);
 }
 
 export default HeaderApp;

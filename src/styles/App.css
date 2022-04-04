@@ -5,11 +5,9 @@
 header {
 	height: 200px;
 	padding: 30px;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
-
 	background-image: url(../assets/bg-mobile-light.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
