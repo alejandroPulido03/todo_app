@@ -1,0 +1,38 @@
+.App {
+	text-align: center;
+}
+
+header {
+	height: 200px;
+	padding: 30px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	background-image: url(../assets/bg-mobile-light.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	font-size: 3rem;
+	letter-spacing: 1.2rem;
+}
+
+.header-darkMode__toggle {
+	display: block;
+	height: 22px;
+	width: 22px;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.light {
+	background-image: url(../assets/icon-moon.svg);
+}
+
+.dark {
+	background-image: url(../assets/icon-sun.svg);
+}
