@@ -4,10 +4,9 @@
 
 header {
 	height: 200px;
-	padding: 30px;
+	padding: 50px 0;
 	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
+	justify-content: center;
 	background-image: url(../assets/bg-mobile-light.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -27,10 +26,94 @@ h1 {
 	background-size: cover;
 }
 
+.app-header__container {
+	width: var(--mobile-width-percent);
+	max-width: var(--max-width-body);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
 .light {
 	background-image: url(../assets/icon-moon.svg);
 }
 
 .dark {
 	background-image: url(../assets/icon-sun.svg);
+}
+
+/*-------------------------------------------------------*/
+
+.app-body__container {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.new-task-input__container {
+	position: absolute;
+	top: -90px;
+
+	width: var(--mobile-width-percent);
+	max-width: var(--max-width-body);
+}
+
+.new-task__input {
+	position: relative;
+
+	width: 100%;
+	height: calc(var(--Body-Copy) * 3.5);
+	padding-left: 50px;
+
+	background-color: var(--box-color);
+	font-size: var(--Body-Copy);
+	font-family: 'Josefin Sans', sans-serif;
+	color: var(--focus-text-color);
+	caret-color: var(--important-text-color);
+	border-radius: 5px;
+
+	outline: none;
+	border: none;
+}
+
+.new-task-input__btn {
+	position: absolute;
+	bottom: calc(var(--Body-Copy));
+	left: 15px;
+	z-index: 1;
+
+	display: block;
+	height: 20px;
+	width: 20px;
+
+	border: var(--secondary-color) 1.5px solid;
+	border-radius: 50%;
+}
+
+.todo-list__container {
+	position: absolute;
+	top: -20px;
+
+	width: var(--mobile-width-percent);
+	max-width: var(--max-width-body);
+
+	list-style-type: none;
+}
+
+.list-element__container {
+	height: calc(var(--Body-Copy) * 3.5);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: var(--Body-Copy);
+	color: var(--focus-text-color);
+	background-color: var(--box-color);
+	border-bottom: solid 1px var(--secondary-color);
+}
+
+.list-element__container:first-child {
+	border-radius: 5px 5px 0 0;
 }

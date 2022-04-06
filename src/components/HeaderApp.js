@@ -10,11 +10,13 @@ class HeaderApp extends React.Component {
 	render() {
 		return (
 			<header className={`header${this.state.colorMode}`}>
-				<h1 className='app-header__logo'>TODO</h1>
-				<DarkModeBtn
-					colorMode={this.state.colorMode}
-					onClick={() => this.switchDarkMode()}
-				></DarkModeBtn>
+				<div className='app-header__container'>
+					<h1 className='app-header__logo'>TODO</h1>
+					<DarkModeBtn
+						colorMode={this.state.colorMode}
+						onClick={() => this.switchDarkMode()}
+					></DarkModeBtn>
+				</div>
 			</header>
 		);
 	}
