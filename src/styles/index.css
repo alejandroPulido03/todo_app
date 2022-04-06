@@ -1,4 +1,5 @@
 :root {
+	--Body-Copy: 1.4rem;
 	/*Primary*/
 	--important-text-color: hsl(220, 98%, 61%);
 	--header-gradient: (
@@ -10,7 +11,8 @@
 	--secondary-color: hsl(233, 11%, 84%);
 	--text-color: hsl(236, 9%, 61%);
 	--focus-text-color: hsl(235, 19%, 35%);
-	--Body-Copy: 1.8rem;
+	--max-width-body: 400px;
+	--mobile-width-percent: 85%;
 }
 
 * {
