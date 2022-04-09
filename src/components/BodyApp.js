@@ -61,6 +61,7 @@ function TextAreaToDo(props) {
 	return (
 		<div className='new-task-input__container'>
 			<span className='new-task-input__btn element-completeTask__btn'></span>
+			<span className='new-task-input__btn'></span>
 			<input
 				className='new-task__input'
 				onKeyUp={e => props.onKeyUp(e)}
@@ -68,6 +69,20 @@ function TextAreaToDo(props) {
 			></input>
 		</div>
 	);
+}
+
+function ToDoList(props) {
+	let globalId = 0;
+	const arrOfElements = props.list.map(e => (
+		<li key={globalId++} className='list-element__container'>
+			<TodoElement element={e}></TodoElement>
+		</li>
+	));
+	return <ul className='todo-list__container'>{arrOfElements}</ul>;
+}
+
+function TodoElement(props) {
+	return <p>{props.element}</p>;
 }
 
 export default BodyApp;
