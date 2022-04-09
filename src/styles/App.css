@@ -82,13 +82,6 @@ h1 {
 	bottom: calc(var(--Body-Copy));
 	left: 15px;
 	z-index: 1;
-
-	display: block;
-	height: 20px;
-	width: 20px;
-
-	border: var(--secondary-color) 1.5px solid;
-	border-radius: 50%;
 }
 
 .todo-list__container {
@@ -114,6 +107,84 @@ h1 {
 	border-bottom: solid 1px var(--secondary-color);
 }
 
+.task-elements__container {
+	width: 90%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.task-elements__container p {
+	width: 80%;
+
+	text-align: left;
+}
+
+.element-completeTask__btn {
+	display: block;
+	height: 20px;
+	width: 20px;
+
+	background-color: transparent;
+	border: var(--secondary-color) 1.5px solid;
+	border-radius: 50%;
+}
+
+.isCompleted {
+	background: url(../assets/icon-check.svg), var(--gradient);
+	background-repeat: no-repeat;
+	background-size: 60%, cover;
+	background-position: center;
+}
+
+.isCompletedbtn {
+	text-decoration: line-through;
+	color: var(--secondary-color);
+}
+
+.element-hidden-delete__btn {
+	height: 15px;
+	width: 15px;
+
+	background-image: url(../assets/icon-cross.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: transparent;
+	visibility: hidden;
+	border: none;
+	outline: none;
+}
+
+.list-element__container:hover .element-hidden-delete__btn {
+	visibility: visible;
+}
+
 .list-element__container:first-child {
 	border-radius: 5px 5px 0 0;
+}
+
+.list-element__container:last-child {
+	color: var(--text-color);
+	border-radius: 0 0 5px 5px;
+}
+
+.listHandler-clear__btn {
+	color: inherit;
+	font-family: inherit;
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.listHandler-clear__btn:hover {
+	color: var(--focus-text-color);
+}
+
+.list-handler__container {
+	padding: 0 20px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }

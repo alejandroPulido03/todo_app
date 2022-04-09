@@ -2,8 +2,10 @@
 	--Body-Copy: 1.4rem;
 	/*Primary*/
 	--important-text-color: hsl(220, 98%, 61%);
-	--header-gradient: (
-		linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+	--gradient: linear-gradient(
+		130deg,
+		hsl(192, 100%, 67%),
+		hsl(280, 87%, 65%)
 	);
 	/*Light Theme*/
 	--box-color: hsl(0, 0%, 98%);
@@ -11,7 +13,7 @@
 	--secondary-color: hsl(233, 11%, 84%);
 	--text-color: hsl(236, 9%, 61%);
 	--focus-text-color: hsl(235, 19%, 35%);
-	--max-width-body: 400px;
+	--max-width-body: 500px;
 	--mobile-width-percent: 85%;
 }
 

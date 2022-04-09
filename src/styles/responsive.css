@@ -17,3 +17,9 @@
 		background-image: url(../assets/bg-mobile-dark.jpg);
 	}
 }
+
+@media (hover: none) {
+	.element-hidden-delete__btn {
+		visibility: visible;
+	}
+}
